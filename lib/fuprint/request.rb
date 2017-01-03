@@ -11,13 +11,13 @@ module Fuprint
       # Only active in development mode
       if Fuprint.mode == 'development'
 
-        r = Rack::Request.new(env)
+        r = ::Rack::Request.new(env)
 
         puts env.inspect if Fuprint.debug
 
         begin
-          puts "\n@ #{c(r.request_method.upcase)} #{c(r.fullpath)}"
-          puts "$ #{c(r.params)}"
+          puts "\n@ #{o(r.request_method.upcase)} #{o(r.fullpath)}"
+          puts "$ #{o(r.params)}"
         rescue => e
           puts "! #{e}"
         end
