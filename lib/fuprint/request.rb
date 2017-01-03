@@ -25,13 +25,13 @@ module Fuprint
 
       @app.call(env)
     end
-  end
 
-  private
+    private
 
-  # Colorize output, 33 is :green (default), 31 is :red
-  def o(s, c = :green)
-    %{\e[#{c == :green ? 33 : 31}33m#{text}\e[0m}
+    # Colorize output, 33 is :green (default), 31 is :red
+    def o(s, c = :green)
+      %{\e[#{c == :green ? 33 : 31}33m#{text}\e[0m}
+    end
   end
 
 end
