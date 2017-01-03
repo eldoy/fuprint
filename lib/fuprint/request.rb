@@ -30,7 +30,7 @@ module Fuprint
 
     # Colorize output, 33 is :green (default), 31 is :red
     def o(s, c = :green)
-      %{\e[#{c == :green ? 33 : 31}33m#{s}\e[0m}
+      %{\e[#{c == :green ? 33 : 31}m#{s}\e[0m}
     end
   end
 
