@@ -31,5 +31,4 @@ module Fuprint
       %{\e[#{c == :green ? 33 : 31}m#{s}\e[0m}
     end
   end
-
 end
