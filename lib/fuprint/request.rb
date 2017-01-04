@@ -10,9 +10,7 @@ module Fuprint
 
       # Only active in development mode
       if Fuprint.mode == 'development'
-
         r = ::Rack::Request.new(env)
-
         puts env.inspect if Fuprint.debug
 
         begin
