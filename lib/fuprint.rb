@@ -9,8 +9,17 @@ module Fuprint
   # @license:  MIT, contributions are welcome.
   # # # # # #
 
-  class << self; attr_accessor :mode, :debug; end
+  class << self; attr_accessor :splat, :strip, :mode, :debug; end
+  # Include splat and captures from Sinatra params
+  @splat = false
+
+  # Strip all params
+  @strip = true
+
+  # Mode
   @mode = ENV['RACK_ENV'] || 'development'
+
+  # Debug
   @debug = false
 end
 
