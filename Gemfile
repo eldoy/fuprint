@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
+gemspec
+
 group :development do
-  gem 'futest', :git => 'https://github.com/fugroup/futest'
-  gem 'rerun' #, :git => 'https://github.com/fugroup/rerun.git'
+  gem 'rerun'
   gem 'rb-fsevent'
   gem 'terminal-notifier'
 end
