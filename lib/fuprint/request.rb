@@ -18,7 +18,7 @@ module Fuprint
         r.params.delete_if{|k, v| %w[splat captures].include?(k)} unless Fuprint.splat
 
         # Strip all params if Fuprint.strip = true (default)
-        r.params.each{|k, v| request.params[k] = v.strip} if Fuprint.strip
+        r.params.each{|k, v| r.params[k] = v.strip} if Fuprint.strip
 
         begin
           puts "\n@ #{o(r.request_method.upcase)} #{o(r.fullpath)}"
