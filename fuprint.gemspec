@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'fuprint'
-  s.version     = '0.1.2'
-  s.date        = '2017-01-05'
+  s.version     = '0.1.3'
+  s.date        = '2017-01-17'
   s.summary     = "Fuprint Rack request printer middleware"
   s.description = "Rack middleware that prints information about your request to console in development."
   s.authors     = ["Fugroup Limited"]

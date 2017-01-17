@@ -1,3 +1,8 @@
+**Version 0.1.2** - *2017-01-17*
+
+- Print also in test mode
+
+
 **Version 0.1.2** - *2017-01-15*
 
 - Fixed strip for nil values
