@@ -8,8 +8,8 @@ module Fuprint
     # Receive the request and print info
     def call(env)
 
-      # Only active in development mode
-      if Fuprint.mode == 'development'
+      # Only active in development or test modes
+      if %w[development test].include?(Fuprint.mode)
         r = ::Rack::Request.new(env)
 
         puts env.inspect if Fuprint.debug
