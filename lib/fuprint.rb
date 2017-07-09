@@ -23,4 +23,5 @@ module Fuprint
   @debug = false
 end
 
+require_relative 'fuprint/helpers'
 require_relative 'fuprint/request'
