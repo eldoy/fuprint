@@ -1,8 +1,6 @@
 module Fuprint
   module Helpers
 
-    private
-
     # Print info
     def print_info(env, req = nil)
 
