@@ -14,7 +14,7 @@ module Fuprint
       puts env.inspect if Fuprint.debug
 
       # Delete the splat and captures if Fuprint.splat = false (default)
-      req.params.delete_if{|k, v| Fuprint.clean.include?(k)} unless Fuprint.clean.any?
+      req.params.delete_if{|k, v| Fuprint.clean.include?(k)} if Fuprint.clean.any?
 
       # Strip all params if Fuprint.strip = true (default)
       req.params.each{|k, v| req.params[k] = (v.is_a?(String) ? v.strip : v)} if Fuprint.strip
