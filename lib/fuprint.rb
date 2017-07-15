@@ -2,18 +2,17 @@ require 'rack'
 
 module Fuprint
 
-  # # # # # #
   # Fuprint rack middleware request printer
   # @homepage: https://github.com/fugroup/fuprint
   # @author:   Vidar <vidar@fugroup.net>, Fugroup Ltd.
   # @license:  MIT, contributions are welcome.
-  # # # # # #
 
-  class << self; attr_accessor :splat, :strip, :mode, :debug; end
-  # Include splat and captures from Sinatra params
-  @splat = false
+  class << self; attr_accessor :clean, :strip, :mode, :debug; end
 
-  # Strip all params
+  # Delete these parameters before every request
+  @clean = %w[splat captures _method]
+
+  # Remove white space from all params
   @strip = true
 
   # Mode
