@@ -1,3 +1,8 @@
+**Version 0.2.0** - *2017-07-15*
+
+- Removed @splat options and replaced with @clean
+
+
 **Version 0.1.4** - *2017-07-12*
 
 - Separated print method into helper
